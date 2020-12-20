@@ -1,11 +1,11 @@
 import React from 'react'
 
 const News = () => {
-   return ( 
+   return (
       <h1>
          News page
       </h1>
-    );
+   );
 }
- 
+
 export default News;

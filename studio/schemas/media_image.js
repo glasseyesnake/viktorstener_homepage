@@ -1,6 +1,6 @@
 export default {
-   name: 'news',
-   title: 'News',
+   name: 'media_image',
+   title: 'Media image',
    type: 'document',
    fields: [
       {
@@ -12,11 +12,6 @@ export default {
          name: 'publishedAt',
          title: 'Published at',
          type: 'datetime',
-      },
-      {
-         name: 'body',
-         title: 'Body',
-         type: 'text',
       },
       {
          name: 'mainImage',

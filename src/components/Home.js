@@ -15,32 +15,24 @@ const Home = () => {
          .then(data => setNews(data))
          .catch(console.error)
    }, [])
-   // async () => {
-   //    try {
-   //       const data = await sanityClient.fetch(query)
-   //       setNews(data)
-   //    } catch (e) {
-   //       console.log(e);
-   //    }
-   // }
 
    return (
-      <main>
+      <main className="main">
          <div className="hero">
-            <section>
+            {/* <section>
                <h1 className="main-title">Viktor Stener</h1>
                <h2 className="main-subtitle">pianist</h2>
-            </section>
-         </div>
-         <div className="main-content">
-            <div className="news">
-               {newsData && newsData.map((news, index) => (
-                  <div className="single-news">
-                     <h1 className="news-title">{news.title}</h1>
-                     <h2 className="news-date">{new Date(news.publishedAt).toLocaleDateString('en-GB')}</h2>
-                     <p className="news-body">{news.body}</p>
-                  </div>
-               ))}
+            </section> */}
+            <div className="main-content">
+               <div className="news">
+                  {newsData && newsData.map((news, index) => (
+                     <div className="single-news">
+                        <h1 className="news-title">{news.title}</h1>
+                        <h2 className="news-date">{new Date(news.publishedAt).toLocaleDateString('en-GB')}</h2>
+                        <p className="news-body">{news.body}</p>
+                     </div>
+                  ))}
+               </div>
             </div>
          </div>
       </main>
