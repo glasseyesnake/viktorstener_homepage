@@ -8,6 +8,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import news from './news'
 import media_image from './media_image'
 import youtube from './youtube'
+import youtubeText from './youtubeText'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -20,6 +21,7 @@ export default createSchema({
     // in the studio.
     news,
     media_image,
+    youtubeText,
     youtube
   ]),
 })

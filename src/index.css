@@ -8,8 +8,12 @@
 }
 
 :root {
-   --accent-color: #DD403A;
+   --accent-color: #9E2B25;
    --bg-color: #fff;
+}
+
+body {
+   /* overflow: hidden; */
 }
 
 .nav-header {
@@ -68,7 +72,7 @@ nav {
 .social-icon-div > * {
    margin: 0 20px;
 }
-
+/* 
 .hero {
    height: 100vh;
    background-image: url(viktor_1.jpg);
@@ -79,7 +83,7 @@ nav {
    align-items: center;
    position: relative;
    z-index: -1;
-}
+} */
 /* 
 .hero::before {
    content: '';
@@ -89,11 +93,11 @@ nav {
    height: 100%;
    z-index: -2;
 } */
-
+/* 
 .hero section {
    color: white;
    margin-left: 30px;
-}
+} */
 
 .main-title {
    font-size: 80px;
@@ -110,18 +114,49 @@ nav {
 }
 
 .main-content {
-   padding: 2rem 4rem;
+   /* padding: 2rem 4rem; */
+   display: flex;
+   justify-content: center;
+   margin: 0 2rem 2rem;
+}
+
+.home-content {
+   display: flex;
+   justify-content: center;
+}
+
+.home-left-container {
+   /* width: 30%; */
+   display: flex;
+   flex-direction: column;
+   margin: 0 2rem 2rem;
+   height: 80vh;
+   max-width: 800px;
+   min-width: 350px;
+   overflow: hidden;
+}
+
+.news-container {
+   margin: 0 2rem;
+   padding: 0 2rem 1rem;
+   border-left: 1px solid #222;
+   min-width: 300px;
+   max-width: 400px;
+   height: 80vh;
+   color: #222;
+   overflow: hidden;
+}
+
+h1 {
+   font-size: 24px;
+   font-weight: bold;
 }
 
 .news {
-   padding: 1rem 2rem;
-   background-color: rgba(0, 0, 0, 0.5);
-   width: 400px;
-   height: 70vh;
-   color: #fff;
-   overflow-y: auto;
    display: flex;
    flex-direction: column;
+   overflow-y: auto;
+   height: 80vh;
 }
 
 .news::-webkit-scrollbar {
@@ -133,7 +168,8 @@ nav {
 } */
 
 .news-title {
-   font-size: 42px;
+   font-size: 24px;
+   font-weight: normal;
    /* font-weight: bold; */
 }
 
@@ -148,29 +184,52 @@ nav {
 }
 
 p {
-   font-size: 18px;
-   padding: 12px 0;
+   font-size: 20px;
+   padding: 0 0 1rem;
 }
 
 .about-content {
-   /* display: flex; */
+   width: 60%;
+   min-width: 700px;
 }
 
-.about-content img {
+.about-content .img-container {
    float: left;
    width: 50%;
-   margin-right: 2rem;
+   margin: 0 2rem 1rem 0;
    max-width: 500px;
 }
 
+.about-text {
+   margin: 0 0 1rem 0;
+}
+
 .contact-content {
-   align-self: center;
-   justify-self: center;
-   margin: auto;
-   border: 1px solid #333;
-   padding: 1rem 2rem;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   /* margin: auto; */
    width: 80%;
+   /* max-width: 400px; */
+}
+
+.contact-info-container {
+   margin: 0 1rem;
+   padding: 0 2rem;
+   border-left: 1px solid black;
+   height: fit-content;
+}
+
+.contact-info-container p {
+   padding: 0;
+}
+
+.form-container {
+   width: 50%;
    max-width: 400px;
+   border: 1px solid #333;
+   margin: 0 1rem;
+   padding: 1rem 2rem;
 }
 
 form {
@@ -201,6 +260,15 @@ form textarea:focus {
    border: none;
    outline: 2px solid var(--accent-color);
    border-radius: 0;
+}
+
+form button {
+   padding: 0.5rem 0;
+   border: 1px solid #333;
+   background-color: #222;
+   border-radius: 0;
+   color: white;
+   text-transform: uppercase;
 }
 
 .media-content {
@@ -234,4 +302,55 @@ form textarea:focus {
    .nav-header {
       flex-direction: column;
    }
+}
+@media (max-width: 800px) {
+   .home-content {
+      flex-direction: column;
+   }
+
+   .home-content .img-container {
+      height: fit-content;
+   }
+
+   .about-content {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      min-width: 100%;
+   }
+
+   .about-content .img-container {
+      float: none;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+   }
+
+   .contact-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      place-items: center;
+      width: 80%;
+      /* max-width: 400px; */
+   }
+
+   .form-container {
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 2rem;
+   }
+
+   .contact-info-container {
+      border-left: 0;
+   }
+}
+
+@media only screen and (max-width: 500px) {
+
+   * { 
+      font-size: calc(12px + 1vw); 
+   }
+
 }

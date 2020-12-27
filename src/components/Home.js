@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
-import sanityClient from "../client.js";
+import React, { useState, useEffect } from "react"
+import sanityClient from "../client.js"
+import img from '../viktor_1.jpg'
+
 
 const Home = () => {
    const [newsData, setNews] = useState(null)
@@ -17,13 +19,28 @@ const Home = () => {
    }, [])
 
    return (
-      <main className="main">
-         <div className="hero">
-            {/* <section>
+      <main className="main-content">
+         {/* <div className="hero"> */}
+         {/* <section>
                <h1 className="main-title">Viktor Stener</h1>
                <h2 className="main-subtitle">pianist</h2>
             </section> */}
-            <div className="main-content">
+         <div className="home-content">
+            <div className="home-left-container">
+               <div className="home-about-container">
+                  <p>
+                  Jag är en pianist bosatt i Göteborg, verksam som solist, kammarmusiker, ackompanjatör och barpianist. Läs mer!
+                  </p>
+
+               </div>
+               <div className="img-container">
+                  <img src={img} alt="viktor" />
+
+               </div>
+
+            </div>
+            <div className="news-container">
+               <h1>Nyheter</h1>
                <div className="news">
                   {newsData && newsData.map((news, index) => (
                      <div className="single-news">
@@ -35,6 +52,7 @@ const Home = () => {
                </div>
             </div>
          </div>
+         {/* </div> */}
       </main>
 
    );
